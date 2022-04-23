@@ -21,3 +21,5 @@ encapsulamento.
 ## Acoplamento:
 1. Quando o seu código está muito acoplado, qualquer alteração em uma classe é necessário realizar em outra. Uma das formas de fugir desse 
 acoplamento é utilizar abstraçoes em vez de classes concretas.
+2. Para analisar o encapsulamento, faz sentido entrar nas classes e ler elas e verificar as regras de negócio que ela implementa tem alguma
+coisa a ver no contexto da classe onde ela está.

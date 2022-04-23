@@ -1,5 +1,7 @@
 <?php
 
+namespace Solid\Model;
+
 class AluraMais
 {
   public function minutosDeDuracao()
