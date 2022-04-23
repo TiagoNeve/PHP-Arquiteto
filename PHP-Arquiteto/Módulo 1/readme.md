@@ -12,3 +12,8 @@ D
 caso exista uma classe Pessoa que pode salvar algo no banco de dados, então essa classe não está coesa.
 2. O objetivo de criar classes na programação é o ato de tornar o código o mais próximo da realidade, então não faz sentido você
 adicionar funcionalidades que não seria possível realizar no mundo real, pois isso não está coeso
+
+## Emcapsulamento:
+1. Ato de disponibilizar funcionalidades que são conhecidas pelo cliente, sem que o mesmo saiba o que está acontecendo pode debaixo dos panos.
+2. Criar uma classe onde você disponibiliza métodos úteis para que outras classes possam utilizar quando estiver interagindo com seu objeto, é útil para o 
+encapsulamento.

@@ -1,20 +1,20 @@
 <?php
 
-class Video
-{
-  /** @var bool */
-  protected $assistido = false;
-  /** @var string */
-  protected $nome;
-  /** @var \DateInterval */
-  protected $duracao;
+use AluraMais;
+use Curso;
 
-  public function __construct(string $nome)
+class Assistidor
+{
+  public function assisteCurso(Curso $curso)
   {
-    $this->nome = $nome;
-    $this->assistido = false;
-    $this->duraca = \DateInterval::createFromDateString('0');
+    foreach ($curso->recuperarVideos() as $video)
+    {
+      $video->assistir();
+    }
   }
 
-  
+  public function assisteAluraMais(AluraMais $aluraMais)
+  {
+    $aluraMais->assistir();
+  }
 }
