@@ -39,3 +39,7 @@ sendo S um subtipo de T. - Barbara Liskov
 3. Classes filhas nunca deveriam infringir as definições de tipo da classe pai.
 4. É necessário sempre verificar se as classes filhas estão implmentando corretamente o que a classe pai espera que tal classe implemente.
 5. Tente fazer que as classes filhas implementem corretamente.
+
+## D - DEPENDENCY INVERSION PRINCIPLE
+1. Would you solder a lamp directly to the electrical wiring in a wall?
+2. Abstrações não devem depender de implementações. Implementações devem depender de abstrações. - Robert C. Martin
