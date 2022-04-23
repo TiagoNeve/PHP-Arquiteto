@@ -1,7 +1,9 @@
 <?php
 
-use AluraMais;
-use Curso;
+namespace Solid\Service;
+
+use Solid\Model\AluraMais;
+use SOlid\Model\Curso;
 
 class Assistidor
 {

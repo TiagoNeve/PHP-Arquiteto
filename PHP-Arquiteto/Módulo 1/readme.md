@@ -27,3 +27,7 @@ encapsulamento.
 acoplamento é utilizar abstraçoes em vez de classes concretas.
 2. Para analisar o encapsulamento, faz sentido entrar nas classes e ler elas e verificar as regras de negócio que ela implementa tem alguma
 coisa a ver no contexto da classe onde ela está.
+
+## O - Open Closed Principle
+1. Open Chest Surgery Is Not Needed When Putting On A Coat
+2. Entidades de software (casses, módulos, funções, etc) devem ser abertas para expansão, porém, fechadas para modificações - Bertrand Mayer

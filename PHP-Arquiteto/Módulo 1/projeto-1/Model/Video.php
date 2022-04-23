@@ -30,7 +30,7 @@ class Video
 
   public function recuperarUrl(): string
   {
-    return 'http://videos.com.br/' . http_build_query()
+    return 'http://videos.com.br/' . http_build_query(['nome' => $this->nome]);
   }
 
 }
