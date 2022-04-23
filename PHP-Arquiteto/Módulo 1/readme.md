@@ -31,3 +31,11 @@ coisa a ver no contexto da classe onde ela está.
 ## O - Open Closed Principle
 1. Open Chest Surgery Is Not Needed When Putting On A Coat
 2. Entidades de software (casses, módulos, funções, etc) devem ser abertas para expansão, porém, fechadas para modificações - Bertrand Mayer
+
+## L - Liskov Substitution Principle
+1. If it looks like a duck, quacks like a duck, but needs batteries - You pobably have the wrong abstraction
+2. Seja q(x) uma propriedade que se pode provar do objeto x do tipo T. Então, q(y) também é possível provar para o objeto y do tipo S, 
+sendo S um subtipo de T. - Barbara Liskov
+3. Classes filhas nunca deveriam infringir as definições de tipo da classe pai.
+4. É necessário sempre verificar se as classes filhas estão implmentando corretamente o que a classe pai espera que tal classe implemente.
+5. Tente fazer que as classes filhas implementem corretamente.
