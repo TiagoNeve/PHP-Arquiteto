@@ -2,21 +2,12 @@
 
 namespace Solid\Service;
 
-use Solid\Model\AluraMais;
-use SOlid\Model\Curso;
+use Solid\Model\IPontuavel;
 
 class Assistidor
 {
-  public function assisteCurso(Curso $curso)
+  public function assistir(IPontuavel $conteudo)
   {
-    foreach ($curso->recuperarVideos() as $video)
-    {
-      $video->assistir();
-    }
-  }
-
-  public function assisteAluraMais(AluraMais $aluraMais)
-  {
-    $aluraMais->assistir();
+    $conteudo->assistir(); 
   }
 }

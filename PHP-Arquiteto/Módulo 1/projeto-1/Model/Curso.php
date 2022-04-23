@@ -39,4 +39,11 @@ class Curso implements IPontuavel
   {
     return 100;
   }
+
+  public function assistir(): void
+  {
+    foreach ($this->recuperarVideos() as $video) {
+      $video->assistir();
+    }
+  }
 }
