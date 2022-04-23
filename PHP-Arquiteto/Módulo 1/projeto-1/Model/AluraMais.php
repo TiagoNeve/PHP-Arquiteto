@@ -2,10 +2,23 @@
 
 namespace Solid\Model;
 
-class AluraMais
+class AluraMais extends Video implements IPontuavel
 {
-  public function minutosDeDuracao()
+  private $categoria;
+
+  public function __construct(string $nome, string $categoria)
   {
-    return 1;
+    parent::__construct($nome);
+    $this->categoria = $categoria;
+  }
+
+  public function recuperarUrl(): string
+  {
+    return str_replace(' ', '-', strtolower($this->categoria));
+  }
+
+  public function recuperarPontuacao(): int
+  {
+    return $this->minutosDeDuracao() * 2;
   }
 }
