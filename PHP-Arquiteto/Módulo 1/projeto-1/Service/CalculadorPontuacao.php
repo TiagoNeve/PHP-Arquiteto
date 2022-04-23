@@ -1,5 +1,10 @@
 <?php
 
+namespace Solid\Service;
+
+use Solid\Model\AluraMais;
+use Solid\Model\Curso;
+
 class CalculadorPontuacao
 {
   public function recuperarPontuacao($conteudo)
@@ -9,7 +14,7 @@ class CalculadorPontuacao
     } else if ($conteudo instanceof AluraMais) {
       return $conteudo->minutosDeDuracao() * 2;
     } else {
-      throw new \DomainException('Errozão aqui');
+      throw new \DomainException('Apenas Cursos e Vídeos');
     }
   }
 }

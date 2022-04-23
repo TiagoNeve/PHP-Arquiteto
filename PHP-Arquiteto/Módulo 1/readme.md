@@ -7,11 +7,15 @@ L
 I
 D
 
-## S - 
+## S - Single Responsibility Principle
 1. Tentar deixar a classe o mais coeso possível, em que tal classe deve ter apenas a responsabilidade equivalente ao objeto que ela representa
 caso exista uma classe Pessoa que pode salvar algo no banco de dados, então essa classe não está coesa.
 2. O objetivo de criar classes na programação é o ato de tornar o código o mais próximo da realidade, então não faz sentido você
 adicionar funcionalidades que não seria possível realizar no mundo real, pois isso não está coeso
+3. Just Because You Car, Doesn't Mean You Should
+4. Uma classe só deveria ter um único motivo para mudar. - Robert (Uncle Bob) Martin - Para ser reescrito.
+5. Procurar sempre se existe regras de negócio que podem ser mudadas e se tiver mais de duas em uma classe, é necessário refatorar
+pois a classe só deve ter um motivo para mudar.
 
 ## Emcapsulamento:
 1. Ato de disponibilizar funcionalidades que são conhecidas pelo cliente, sem que o mesmo saiba o que está acontecendo pode debaixo dos panos.
