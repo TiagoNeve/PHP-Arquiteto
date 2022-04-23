@@ -2,7 +2,7 @@
 
 namespace Solid\Model;
 
-class AluraMais extends Video implements IPontuavel
+class AluraMais extends Video implements IPontuavel, IAssistivel
 {
   private $categoria;
 

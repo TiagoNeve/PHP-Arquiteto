@@ -2,11 +2,11 @@
 
 namespace Solid\Service;
 
-use Solid\Model\IPontuavel;
+use Solid\Model\IAssistivel;
 
 class Assistidor
 {
-  public function assistir(IPontuavel $conteudo)
+  public function assistir(IAssistivel $conteudo)
   {
     $conteudo->assistir(); 
   }

@@ -2,7 +2,7 @@
 
 namespace Solid\Model;
 
-class Curso implements IPontuavel
+class Curso implements IPontuavel, IAssistivel
 {
   private $nome;
   private $videos;

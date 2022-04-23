@@ -40,6 +40,13 @@ sendo S um subtipo de T. - Barbara Liskov
 4. É necessário sempre verificar se as classes filhas estão implmentando corretamente o que a classe pai espera que tal classe implemente.
 5. Tente fazer que as classes filhas implementem corretamente.
 
+## I - Interface Segregation Principle
+1. Segrege suas interfaces, crie interfaces novas para que o código fique mais coeso.
+2. Uma classe não pode ser forçada a depender de métodos que não utilizará - Robert C. Martin
+
 ## D - DEPENDENCY INVERSION PRINCIPLE
 1. Would you solder a lamp directly to the electrical wiring in a wall?
 2. Abstrações não devem depender de implementações. Implementações devem depender de abstrações. - Robert C. Martin
+3. Separe as interfaces em duas para deixar o código mais usuál.
+
+# SOLID É O OBJETIVO NA HORA DA CONSTRUÇÃO DO CÓDIGO, TENTE CODIFICAR PARA ALCANÇAR CÓDIGOS NO NÍVEL DE SOLID.
