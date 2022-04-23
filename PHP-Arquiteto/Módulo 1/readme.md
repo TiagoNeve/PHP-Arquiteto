@@ -17,3 +17,7 @@ adicionar funcionalidades que não seria possível realizar no mundo real, pois 
 1. Ato de disponibilizar funcionalidades que são conhecidas pelo cliente, sem que o mesmo saiba o que está acontecendo pode debaixo dos panos.
 2. Criar uma classe onde você disponibiliza métodos úteis para que outras classes possam utilizar quando estiver interagindo com seu objeto, é útil para o 
 encapsulamento.
+
+## Acoplamento:
+1. Quando o seu código está muito acoplado, qualquer alteração em uma classe é necessário realizar em outra. Uma das formas de fugir desse 
+acoplamento é utilizar abstraçoes em vez de classes concretas.
