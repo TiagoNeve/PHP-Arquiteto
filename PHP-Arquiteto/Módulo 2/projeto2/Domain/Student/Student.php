@@ -11,7 +11,7 @@ class Student
 {
   private Email $email;
   private DateTimeInterface $bd;
-  private Map $whatchedVideos;
+  private WhatchedVideos $whatchedVideos;
   private string $fName;
   private string $lName;
   public string $street;
@@ -34,7 +34,7 @@ class Student
     string $country
   )
   {
-    $this->whatchedVideos = new Map();
+    $this->whatchedVideos = new WhatchedVideos();
     $this->$email;
     $this->bd = $bd;
     $this->fName = $fName;
@@ -64,7 +64,7 @@ class Student
 
   public function watch(Video $video, DateTimeInterface $date)
   {
-    $this->whatchedVideos->put($video, $date);
+    $this->whatchedVideos->add($video, $date);
   }
 
   public function hasAccess(): bool
@@ -73,9 +73,7 @@ class Student
       return true;
     }
 
-    $this->whatchedVideos->sort(fn (DateTimeInterface $dateA, DateTimeInterface $dateB) => $dateA <=> $dateB);
-    /** @var DateTimeInterface $firstDate */
-    $firstDate = $this->whatchedVideos->first()->value;
+    $firstDate = $this->whatchedVideos->dateOfFirstVideo();
     $today = new \DateTimeImmutable();
 
     return $firstDate->diff($today)->days < 90;
