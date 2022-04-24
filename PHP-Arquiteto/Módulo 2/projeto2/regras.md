@@ -15,3 +15,4 @@ pecl install dss
 4. Envolva seus tipos primitivos (caso eles tenham comportamento)
 > Sempre tente buscar entidades relacionado ao objeto que fazem sentido estar em uma classe separada, sempre que uma entidade começe a ganhar forma, tente criar uma classe para ela.
 > Se o tipo tiver comportamento, faz sentido envolver.
+5. Coleções de primeira classe 
