@@ -29,3 +29,9 @@ pecl install dss
 > Tentar olhar o tamanho da classe e dos métodos que ela compõe, evitar ter métodos muito grandes que ocupe muito espaço, caso existe, seria recomendável refatorar tal método
 > com os padrões de refatoração.
 > Assim fica mais fácil de se manter, pois é mais fácil alterar uma classe que está pequena do que uma enorme.
+9. Tenha no máximo 2 propriedades por classe.
+> Separar suas classes em 2 tipos uma para gerenciar o estado de uma única propriedade ou coleção e outra que gerencia no máximo 2 propriedades.
+> Tentar chegar mais perto disso, 5 propriedades pode fazer mais sentido
+
+Object Calisthenics are programming exercises, formalized as a set of 9 rules invented by Jeff Bay in his book The ThoughtWorks Anthology.
+> Usado para exercitar alguns princípios de Orientação a Objetos.
