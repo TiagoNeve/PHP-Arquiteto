@@ -11,3 +11,4 @@ pecl install dss
 > Desnecessária na orientação a objetos a gente não precisa dela. 
 > Fail fast e.e - Caso você tenha um else que apenas estoura um erro, então você pode tirar o else e buscar primeiro o cenário onde estoura o erro
 > e depois realizar a regra de negócio para quando não estourar o erro, isso evita a utilização do else.
+> Conceito: Obsseção por tipos primitivos - Colocar como string algo que tem significado, como email. Então vale mais a pena criar uma classe de email do que colocar ele como string.

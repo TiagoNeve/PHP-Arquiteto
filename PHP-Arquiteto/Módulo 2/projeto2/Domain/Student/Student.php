@@ -5,10 +5,11 @@ namespace Calisthenics\Domain\Student;
 use Calisthenics\Domain\Video\Video;
 use DateTimeInterface;
 use Ds\Map;
+use Calisthenics\Domain\Email\Email;
 
 class Student
 {
-  private string $email;
+  private Email $email;
   private DateTimeInterface $bd;
   private Map $whatchedVideos;
   private string $fName;
@@ -21,7 +22,7 @@ class Student
   public string $country;
 
   public function __construct(
-    string $email,
+    Email $email,
     DateTimeInterface $bd,
     string $fName,
     string $lName,
@@ -34,7 +35,7 @@ class Student
   )
   {
     $this->whatchedVideos = new Map();
-    $this->setEmail($email);
+    $this->$email;
     $this->bd = $bd;
     $this->fName = $fName;
     $this->lName = $lName;
@@ -51,19 +52,10 @@ class Student
     return "{$this->fName} {$this->lName}";
   }
 
-  private function setEmail(string $email)
-  {
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL) != false) {
-      throw new \InvalidArgumentException('Invalid e-mail address');
-    }
-    
-    $this->email = $email;
-  }
-
   public function getEmail(): string
   {
     return $this->email;
-  }
+  }  
 
   public function getBd(): DateTimeInterface
   {
