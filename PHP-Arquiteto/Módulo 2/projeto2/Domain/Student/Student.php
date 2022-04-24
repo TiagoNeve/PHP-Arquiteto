@@ -78,8 +78,8 @@ class Student
   public function hasAccess(): bool
   {
     if ($this->whatchedVideos->count() > 0) {
-      $this->whatchedVideos->sort(fn (DateTimeInterface $dateA, DateTimeInterface $dateB))
-      /** @var DateTimeInterface */
+      $this->whatchedVideos->sort(fn (DateTimeInterface $dateA, DateTimeInterface $dateB) => $dateA <=> $dateB);
+      /** @var DateTimeInterface $firstDate */
       $firstDate = $this->whatchedVideos->first()->value;
       $today = new \DateTimeImmutable();
 

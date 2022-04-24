@@ -4,22 +4,19 @@ namespace Calisthenics\Domain\Video;
 
 class Video
 {
-  public const PUBLIC = 1;
-  public const PRIVATE = 2;
-
-  private int $visibility = self::PRIVATE;
+  private bool $visible = false;
   private int $ageLimit;
 
   // Tentar manter os métodos o mais simples possível
   public function publish(): void
   {
-    $this->visibility = self::PUBLIC;
+    $this->visible = true;
   }
 
-  public function getVisibility(): int
+  public function isPublic(): bool
   {
-    return $this->visibility;
-  }
+    return $this->visible;
+  } 
 
   public function getAgeLimit(): int
   {

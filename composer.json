@@ -1,7 +1,8 @@
 {
     "autoload": {
         "classmap": [
-            "PHP-Arquiteto/"
+            "PHP-Arquiteto/Módulo 2/projeto2/Domain/Student",
+            "PHP-Arquiteto/Módulo 2/projeto2/Domain/Video"
         ]
     },
     "require-dev": {
