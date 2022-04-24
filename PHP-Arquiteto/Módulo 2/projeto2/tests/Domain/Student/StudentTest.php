@@ -2,6 +2,9 @@
 
 namespace Calisthenics\Tests\Unit\Domain\Student;
 
+use Calisthenics\Domain\Email\Email;
+use Calisthenics\Domain\Student\Address;
+use Calisthenics\Domain\Student\FullName;
 use Calisthenics\Domain\Student\Student;
 use Calisthenics\Domain\Video\Video;
 use PHPUnit\Framework\TestCase;
@@ -13,17 +16,16 @@ class StudentTest extends TestCase
   protected function setUp(): void
   {
     $this->student = new Student(
-      'email@example.com',
+      new Email('email@email.com'),
       new \DateTimeImmutable('19:20'),
-      'Primeiro',
-      'Sobrenome',
-      'Rua de exemplo',
-      '718',
-      'Meu Bairro',
-      'Minha Cidade',
-      'Meu estado',
-      'Brasil'
+      new FullName('Primeiro', 'Segundo'),
+      new Address('rua', '100', 'bairro', 'cidade', 'estado', 'pais');
     );
+  }
+
+  public function testFullNameMustBeRepresentedAsString()
+  {
+    self::assertEquals('Primeiro Segundo', $this->student->fullName());
   }
 
   public function testStudentWithoutWatchedVideosHasAccess()

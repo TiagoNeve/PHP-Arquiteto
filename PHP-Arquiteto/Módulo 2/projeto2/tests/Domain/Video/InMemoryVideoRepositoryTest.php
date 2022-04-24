@@ -3,11 +3,11 @@
 namespace Calisthenics\Tests\Unit\Domain\InMemoryVideoRepository;
 
 use Calisthenics\Domain\Student\Student;
-use Calisthenics\Domain\Video\InMemoryVideoRepository;
+
 use Calisthenics\Domain\Video\Video;
 use PHPUnit\Framework\TestCase;
 
-class InMemoryVideoRepository extends TestCase
+class InMemoryVideoRepositoryTest extends TestCase
 {
   public function testFindingVideosForAStudentMustFilterAgeLimit()
   {
