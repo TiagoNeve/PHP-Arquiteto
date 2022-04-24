@@ -24,3 +24,8 @@ pecl install dss
 7. NUNCA abrevie.
 > Nunca abrevie as palavras - Se você repete em muitos lugares e se tem um nome muito grande, verificar se o método está fazendo mais de uma coisa.
 > Nomenclatura, será que faz sentido ficar colocando get e set nos métodos? Dá para entender que getEmail ta pegando o email e getFullName tá trazendo o fullName.
+8. Matenha suas classes e pacotes pequenos
+> Classes 100 linhas e pacotes 12 arquivos. ou 50 linhas e 10 classes
+> Tentar olhar o tamanho da classe e dos métodos que ela compõe, evitar ter métodos muito grandes que ocupe muito espaço, caso existe, seria recomendável refatorar tal método
+> com os padrões de refatoração.
+> Assim fica mais fácil de se manter, pois é mais fácil alterar uma classe que está pequena do que uma enorme.
