@@ -16,3 +16,8 @@ pecl install dss
 > Sempre tente buscar entidades relacionado ao objeto que fazem sentido estar em uma classe separada, sempre que uma entidade começe a ganhar forma, tente criar uma classe para ela.
 > Se o tipo tiver comportamento, faz sentido envolver.
 5. Coleções de primeira classe 
+6. Apenas 1 "ponto" por linha
+> Apenas um operador de acesso por instrunção, significa que nos seus métodos ele só pode ter um operador de acesso para cada método
+> Lei de demeter - Não se deve falar com estranhos, tem que conversar com o objeto da classe e pedir a informação que você precisa, não se deve pegar propriedades da classe e sim pegar
+> métodos que retorna o que você espera que ele retorne.
+> A única exceção seria na utilização do Fluent Interface, onde um método pode encadiar a chamada do mesmo método e assim sucessivamente.
