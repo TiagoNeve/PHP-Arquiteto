@@ -21,3 +21,6 @@ pecl install dss
 > Lei de demeter - Não se deve falar com estranhos, tem que conversar com o objeto da classe e pedir a informação que você precisa, não se deve pegar propriedades da classe e sim pegar
 > métodos que retorna o que você espera que ele retorne.
 > A única exceção seria na utilização do Fluent Interface, onde um método pode encadiar a chamada do mesmo método e assim sucessivamente.
+7. NUNCA abrevie.
+> Nunca abrevie as palavras - Se você repete em muitos lugares e se tem um nome muito grande, verificar se o método está fazendo mais de uma coisa.
+> Nomenclatura, será que faz sentido ficar colocando get e set nos métodos? Dá para entender que getEmail ta pegando o email e getFullName tá trazendo o fullName.
