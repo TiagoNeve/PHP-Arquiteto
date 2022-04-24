@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "classmap": [
+            "PHP-Arquiteto/"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
+}
