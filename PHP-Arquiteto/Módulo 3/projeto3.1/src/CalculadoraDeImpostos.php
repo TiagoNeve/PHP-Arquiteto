@@ -1,18 +1,14 @@
 <?php
 
 namespace DesignPattern;
+
+use DesignPattern\Impostos\IImposto;
+
 // Exemplo de classe que tem grande chance de crescer para sempre
 class CalculadoraDeImpostos
 {
-  public function calcula(Orcamento $orcamento, string $nomeImposto): float
+  public function calcula(Orcamento $orcamento, IImposto $imposto): float
   {
-    switch ($nomeImposto)
-    {
-      case "ICMS":
-        return $orcamento->valor * 0.1;
-
-      case "ISS":
-        return $orcamento->valor * 0.06;
-    }
+    return $imposto->calculaImposto($orcamento);
   }
 }
