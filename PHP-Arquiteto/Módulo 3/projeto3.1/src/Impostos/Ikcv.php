@@ -2,17 +2,23 @@
 
 namespace DesignPattern\Descontos;
 
-use DesignPattern\Impostos\IImposto;
 use DesignPattern\Orcamento;
+use DesignPattern\Impostos\ImpostoCom2Aliquotas;
 
-class Ikcv implements IImposto
+class Ikcv extends ImpostoCom2Aliquotas
 {
-  public function calculaImposto(Orcamento $orcamento): float
+  protected function deveAplicarTaxaMaxima(Orcamento $orcamento): bool
   {
-    if ($orcamento->valor > 300 && $orcamento->quantidadeItens > 3 ) {
-      return $orcamento->valor * 0.04;
-    }
+    return $orcamento->valor > 300 && $orcamento->quantidadeItens > 3;
+  }
 
+  protected function calculaTaxaMaxima(Orcamento $orcamento): float
+  {
+    return $orcamento->valor * 0.04;
+  }
+
+  protected function calculaTaxaMinima(Orcamento $orcamento): float
+  {
     return $orcamento->valor * 0.025;
   }
 }

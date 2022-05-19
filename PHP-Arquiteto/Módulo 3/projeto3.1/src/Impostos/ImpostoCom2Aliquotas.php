@@ -1,0 +1,24 @@
+<?php
+
+namespace DesignPattern\Impostos;
+
+use DesignPattern\Orcamento;
+use DesignPattern\Impostos\IImposto;
+
+abstract class ImpostoCom2Aliquotas implements IImposto
+{
+    public function calculaImposto(Orcamento $orcamento): float
+    {
+        if ($this->deveAplicarTaxaMaxima($orcamento)) {
+            return $this->calculaTaxaMaxima($orcamento);
+        }
+
+        return $this->calculaTaxaMinima($orcamento);
+    }
+
+    abstract protected function deveAplicarTaxaMaxima(Orcamento $orcamento): bool;
+
+    abstract protected function calculaTaxaMaxima(Orcamento $orcamento): float;
+
+    abstract protected function calculaTaxaMinima(Orcamento $orcamento): float;
+} 
